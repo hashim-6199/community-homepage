@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community School | Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.8rem;
+    }
+
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      padding: 0.8rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #4a90e2;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .section h2::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #4a90e2;
+      margin-top: 0.5rem;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      background: #4a90e2;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .btn-scroll {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ffeb3b;
+      color: #333;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      cursor: pointer;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        margin: 0 0.5rem;
+      }
+
+      .section {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>L DORADO COMMUNITY SCHOOL</h1>
+    <p>Empowering young minds for a brighter future 🌱</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#programs">Programs</a>
+    <a href="#faculty">Faculty</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="section" id="about">
+    <h2>About Us</h2>
+    <p>L dorado community School is a safe, inclusive environment fostering lifelong learners and responsible citizens. With a deep commitment to academic excellence, we empower students with values, creativity, and critical thinking skills.</p>
+  </section>
+
+  <section class="section" id="programs">
+    <h2>Our Programs</h2>
+    <div class="card">
+      <h3>Primary Education</h3>
+      <p>Foundational learning through interactive and play-based methods for Grades 1–5.</p>
+    </div>
+    <div class="card">
+      <h3>Middle School</h3>
+      <p>Core academic development with enrichment in STEM, arts, and languages.</p>
+    </div>
+    <div class="card">
+      <h3>High School</h3>
+      <p>Advanced curriculum with career guidance and college prep tracks.</p>
+    </div>
+  </section>
+
+  <section class="section" id="faculty">
+    <h2>Our Faculty</h2>
+    <p>Our educators are passionate, qualified, and dedicated to nurturing every child’s full potential. From counselors to STEM mentors, every staff member is trained in inclusive teaching and growth-oriented practices.</p>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@ldoradoschool.edu</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Address: 123 Knowledge Lane, EduCity, Kerala</p>
+  </section>
+
+  <footer>
+    <p>© 2025 ldorado Community School | Designed by muh-hashim</p>
+  </footer>
+
+  <button class="btn-scroll" onclick="scrollToTop()">↑</button>
+
+  <script>
+    const btn = document.querySelector('.btn-scroll');
+    window.onscroll = () => {
+      btn.style.display = (window.scrollY > 300) ? 'block' : 'none';
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
